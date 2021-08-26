@@ -25,6 +25,12 @@ public class Test {
 		logger.debug("这是一个调试信息");
 		logger.info("这是一个info信息");
 		
+		try {
+			int a = 5/0;
+		} catch (Exception e) {
+			logger.error(e.getMessage());
+		}
+		
 //		3.log4j 中可以输出指定内容的日志(控制某个局部内容的日志级别)
 //			3.1.1 先在总体级别调成Error 不输出无用信息
 //			3.1.2 在设置某个指定位置级别为DEBUG
